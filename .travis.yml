@@ -6,4 +6,4 @@ before_install:
   - docker build -t bpatmiller/brendanmillerio-docker -f Dockerfile.dev .
  
 script:
-  - docker run bpatmiller/brendanmillerio-docker npm run test -- --coverage
+  - docker run -e CI=true -it bpatmiller/brendanmillerio-docker npm run test -- --coverage
