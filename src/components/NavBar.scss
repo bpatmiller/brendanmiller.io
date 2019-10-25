@@ -1,0 +1,26 @@
+.navBar-wrapper{
+    margin: 24px;
+    text-align: left;
+    display: grid;
+    align-items: start;
+    justify-items: start;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: 'title header';
+}
+
+.navBar-col{
+    justify-self: start;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-items: center;
+    text-align: left;}
+
+.navBar-right {
+    justify-self: end;
+}
+
+.navBar-span {
+    margin-left: 16px;
+    margin-right: 16px;
+}
