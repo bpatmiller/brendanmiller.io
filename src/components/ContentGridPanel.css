@@ -1,0 +1,14 @@
+.root {
+  flex-grow: 1;
+}
+
+.paper {
+  padding: 8px;
+  text-align: "center";
+  color: black;
+}
+
+.paper:hover {
+  transform: rotate(0.2turn);
+  background-color: red;
+}
