@@ -1,27 +1,15 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import { useRef, useState, useEffect } from 'react';
-
-const useStyles = makeStyles(theme => ({
-    root: {
-      flexGrow: 1,
-    },
-    paper: {
-      padding: theme.spacing(2),
-      textAlign: 'center',
-      color: theme.palette.text.secondary,
-    },
-  }));
+import './ContentGridPanel.css'
 
 export default function ContentGridPanel(props) {
-    const classes = useStyles();
     const [hoverRef, isHovered] = useHover();
 
     return (
     <Grid item xs={12} sm={6} md={4}>
-        <Paper className={classes.paper} ref={hoverRef}>{isHovered ? 'hovered' : props.title}</Paper>
+        <Paper className='paper' ref={hoverRef}>{isHovered ? 'hovered' : props.title}</Paper>
     </Grid>
     );
 }
