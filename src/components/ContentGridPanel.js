@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { useHover } from "./UseHover";
-import { useSpring, animated } from "react-spring";
+import { useSpring, useTransition, animated } from "react-spring";
 import { useMousePosition } from "./UseMousePosition";
 
 import "./ContentGrid.scss";
@@ -9,8 +9,10 @@ import colors from "./colors.scss";
 export default function ContentGridPanel(props) {
   const [hoverRef, isHovered] = useHover();
   const mousePosition = useMousePosition();
+  const [on, toggle] = useState(false);
+
   const springProps = useSpring({
-    config: { tension: 200, friction: 12 },
+    config: { friction: isHovered ? 26 : 12 },
     to: {
       transform: isHovered
         ? getTranslation(hoverRef, isHovered, mousePosition)
@@ -20,21 +22,31 @@ export default function ContentGridPanel(props) {
   });
 
   const wrapperSpringProps = useSpring({
-    config: { tension: 200 },
     to: {
       transform: isHovered ? "scale(1.1)" : "scale(1)"
     }
   });
 
+  // const transitionProps = useTransition({on, null, {
+  //   from: { opacity: 0 },
+  //   enter: { opacity: 1 },
+  //   leave: { opacity: 0 }
+  // });
+
   return (
     <div className="flex-item">
-      <div className="item-wrapper">
+      <div className="item-wrapper" style={{opacity: 1}}>
         <animated.div
           className="item-backdrop"
           style={wrapperSpringProps}
         ></animated.div>
-        <animated.div className="item-content" style={springProps} ref={hoverRef}>
-          {props.title}
+        <animated.div
+          className="item-content"
+          style={springProps}
+          ref={hoverRef}
+          onClick={() => toggle(!on)}
+        >
+          {on ? "toggled" : props.title}
         </animated.div>
       </div>
     </div>
