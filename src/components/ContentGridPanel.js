@@ -1,5 +1,4 @@
 import React from "react";
-import Grid from "@material-ui/core/Grid";
 import { useHover } from "./UseHover";
 import { useSpring, animated } from "react-spring";
 import { useMousePosition } from "./UseMousePosition";
@@ -28,17 +27,17 @@ export default function ContentGridPanel(props) {
   });
 
   return (
-    <Grid item xs={12} sm={6} md={4}>
-      <div className="paperWrapper">
+    <div className="flex-item">
+      <div className="item-wrapper">
         <animated.div
-          className="paperBackdrop"
+          className="item-backdrop"
           style={wrapperSpringProps}
         ></animated.div>
-        <animated.div className="paper" style={springProps} ref={hoverRef}>
-          {isHovered ? "hover" : props.title}
+        <animated.div className="item-content" style={springProps} ref={hoverRef}>
+          {props.title}
         </animated.div>
       </div>
-    </Grid>
+    </div>
   );
 }
 

@@ -1,5 +1,4 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
 import ContentGridPanel from './ContentGridPanel'
 
 import './ContentGrid.scss'
@@ -11,10 +10,8 @@ const gridItems = array1.map((x) => <ContentGridPanel title={x}/>);
 
 export default function ContentGrid(props) {
   return (
-    <div className='contentGridRoot'>
-      <Grid className='contentGrid' container spacing={3} alignContent='center' alignItems='center' justify='center'>
+    <div className='flex-container'>
         {gridItems}
-      </Grid>
     </div>
   );
 }
