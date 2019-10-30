@@ -4,8 +4,8 @@
     display: grid;
     align-items: start;
     justify-items: start;
-    grid-template-columns: 50% 50%;
-    grid-template-areas: 'title header';
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: 'title colorbar header';
     margin-bottom: 48px;
 }
 
@@ -19,6 +19,10 @@
 
 .navBar-right {
     justify-self: end;
+}
+
+.navBar-center {
+    justify-self: center;
 }
 
 .navBar-span {

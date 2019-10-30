@@ -1,0 +1,12 @@
+.colorbar-container {
+    display: flex;
+    max-width: 300px;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.colorbar-block {
+    width: 24px;
+    height: 24px;
+}

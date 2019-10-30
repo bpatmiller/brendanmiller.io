@@ -27,28 +27,27 @@ export default function ContentGridPanel(props) {
     }
   });
 
-  // const transitionProps = useTransition({on, null, {
-  //   from: { opacity: 0 },
-  //   enter: { opacity: 1 },
-  //   leave: { opacity: 0 }
-  // });
+  const transitionProps = useTransition(on, null, {
+    enter: { opacity: 0.5 },
+    leave: { opacity: 0.9 }
+  });
 
   return (
     <div className="flex-item">
-      <div className="item-wrapper" style={{opacity: 1}}>
-        <animated.div
-          className="item-backdrop"
-          style={wrapperSpringProps}
-        ></animated.div>
-        <animated.div
-          className="item-content"
-          style={springProps}
-          ref={hoverRef}
-          onClick={() => toggle(!on)}
-        >
-          {on ? "toggled" : props.title}
-        </animated.div>
-      </div>
+        <div className="item-wrapper">
+            <animated.div
+              className="item-backdrop"
+              style={wrapperSpringProps}
+            ></animated.div>
+            <animated.div
+              className="item-content"
+              style={springProps}
+              ref={hoverRef}
+              onClick={() => toggle(!on)}
+            >
+              {on ? "toggled" : props.title}
+            </animated.div>
+        </div>
     </div>
   );
 }
