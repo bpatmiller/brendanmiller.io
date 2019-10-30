@@ -11,6 +11,7 @@ export default function ContentGridPanel(props) {
   const [hoverRef, isHovered] = useHover();
   const mousePosition = useMousePosition();
   const springProps = useSpring({
+    config: { tension: 200, friction: 12 },
     to: {
       transform: isHovered
         ? getTranslation(hoverRef, isHovered, mousePosition)
@@ -20,6 +21,7 @@ export default function ContentGridPanel(props) {
   });
 
   const wrapperSpringProps = useSpring({
+    config: { tension: 200 },
     to: {
       transform: isHovered ? "scale(1.1)" : "scale(1)"
     }
