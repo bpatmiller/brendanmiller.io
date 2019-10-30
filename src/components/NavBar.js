@@ -13,8 +13,6 @@ export default class NavBar extends Component {
             <br />
             im gay
           </span>
-        </span>
-        <span className="navBar-col navBar-center">
           <span className="navBar-span">
             <ColorBar />
           </span>

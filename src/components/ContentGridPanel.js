@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHover } from "./UseHover";
-import { useSpring, useTransition, animated } from "react-spring";
+import { useSpring, animated } from "react-spring";
 import { useMousePosition } from "./UseMousePosition";
 
 import "./ContentGrid.scss";
@@ -27,10 +27,10 @@ export default function ContentGridPanel(props) {
     }
   });
 
-  const transitionProps = useTransition(on, null, {
-    enter: { opacity: 0.5 },
-    leave: { opacity: 0.9 }
-  });
+  // const transitionProps = useTransition(on, null, {
+  //   enter: { opacity: 0.5 },
+  //   leave: { opacity: 0.9 }
+  // });
 
   return (
     <div className="flex-item">
