@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import NavBar from './components/NavBar';
 import ContentGrid from './components/ContentGrid';
 

@@ -1,0 +1,13 @@
+$background00 : white;
+$background01 : pink;
+$background02: gray;
+$foreground00: black;
+$foreground01 : red;
+
+:export {
+    background00: $background00;
+    background01: $background01;
+    background02: $background02;
+    foreground00: $foreground00;
+    foreground01: $foreground01;
+  }
