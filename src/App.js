@@ -10,7 +10,7 @@ function App() {
     <Router>
     <div>
       <Route exact path="/" component={HomePage} />
-      <Route path="/test" component={TestPage} />
+      <Route path="/mira" component={TestPage} />
     </div>
   </Router>
     </div>
