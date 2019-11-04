@@ -11,7 +11,7 @@ function App() {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/mira" component={TestPage} />
+          <Route exact path="/test" component={TestPage} />
           <Route component={Page404} />
         </Switch>
       </Router>

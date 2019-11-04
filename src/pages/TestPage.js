@@ -3,12 +3,12 @@ import "../App.scss";
 import HoveredText from "../components/HoveredText";
 
 export default function TestPage() {
-  const textString = "i <3 mira";
+  const textString = "aSA8MyBtaXJh";
 
   return (
     <div className="page">
       <div style={{ maxWidth: "600px", padding: "64px", margin: "auto" }}>
-        <HoveredText text={textString} />
+        <HoveredText text={atob(textString)} />
       </div>
     </div>
   );
