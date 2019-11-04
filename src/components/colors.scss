@@ -1,15 +1,15 @@
 $background00 : white;
 $background01 : pink;
 $background02: gray;
-$background03: green;
 $foreground00: black;
-$foreground01 : red;
+$foreground01: red;
+$foreground02 : purple;
 
 :export {
     background00: $background00;
     background01: $background01;
     background02: $background02;
-    background03: $background03;
     foreground00: $foreground00;
     foreground01: $foreground01;
+    foreground02: $foreground02;
   }
