@@ -7,7 +7,7 @@ export default function TestPage() {
 
   return (
     <div className="page">
-      <div style={{padding: "64px"}}>
+      <div style={{ maxWidth: "600px", padding: "64px", margin: "auto" }}>
         <HoveredText text={textString} />
       </div>
     </div>
