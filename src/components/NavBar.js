@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import "./NavBar.scss";
 import ColorBar from "./ColorBar.js";
+
+import "../scss/NavBar.scss";
 
 export default class NavBar extends Component {
   render() {

@@ -1,14 +1,15 @@
 import React from "react";
-import "./App.scss";
 import { Route, Switch, BrowserRouter as Router } from "react-router-dom";
+
 import HomePage from "./pages/HomePage";
 import TestPage from "./pages/TestPage";
 import TrackPage from "./pages/TrackPage";
 import Page404 from "./pages/Page404";
 
+import "./scss/App.scss";
+
 function App() {
   return (
-    <div className="App">
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
@@ -17,7 +18,6 @@ function App() {
           <Route component={Page404} />
         </Switch>
       </Router>
-    </div>
   );
 }
 

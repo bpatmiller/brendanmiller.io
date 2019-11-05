@@ -3,8 +3,8 @@ import { useHover } from "./UseHover";
 import { useSpring, animated } from "react-spring";
 import { useMousePosition } from "./UseMousePosition";
 
-import "./ContentGrid.scss";
-import colors from "./colors.scss";
+import "../scss/ContentGrid.scss";
+import colors from "../scss/colors.scss";
 
 export default function ContentGridPanel(props) {
   const [hoverRef, isHovered] = useHover();

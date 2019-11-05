@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import "../App.scss";
-import "../components/404.scss";
+import "../scss/404.scss";
 
 export default function TestPage(props) {
   var currentLocation = props.location.pathname;

@@ -1,7 +1,6 @@
 import React from "react";
 import { useHover } from "./UseHover";
 import { useSpring, animated } from "react-spring";
-import "../App.scss";
 
 export default function HoveredText(props) {
     const [hoverRef, isHovered] = useHover();

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 export default function TextField(props) {
-  const dummyText = "type a string here";
-  const [text, setText] = useState(dummyText);
+  const [text, setText] = useState("");
 
   return (
     <div>

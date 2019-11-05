@@ -1,7 +1,7 @@
 import React from 'react';
 import ContentGridPanel from './ContentGridPanel'
 
-import './ContentGrid.scss'
+import '../scss/ContentGrid.scss'
 
 var array1 = ['panel1', 'panel2', 'panel3', 'panel4', 'panel5', 'panel6'];
 

@@ -1,7 +1,7 @@
 import React from "react";
 
-import "./colorbar.scss"
-import colors from "./colors.scss";
+import "../scss/colorbar.scss"
+import colors from "../scss/colors.scss";
 
 export default function ColorBar(props) { 
     const colorBlocks = Object.entries(colors).map( (key, val) => 
