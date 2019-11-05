@@ -4,13 +4,14 @@ import "../scss/Track.scss";
 
 export default function TrackPage() {
   const [trackingNumbers, setTrackingNumbers] = useState("");
+  
   const splitTrackingNumbers = trackingNumbers
     .split(/\r?\n/)
     .map(st => st.trim())
     .filter(st => st !== "");
-  console.log(splitTrackingNumbers);
+  
   const trackingCards = splitTrackingNumbers.map(st => (
-    <TrackingCard number={st} carrier="fedex"/>
+    <TrackingCard {... getTrackingCardProps(st)}/>
   ));
 
   return (
@@ -25,4 +26,9 @@ export default function TrackPage() {
       <div>{trackingCards}</div>
     </React.Fragment>
   );
+}
+
+function getTrackingCardProps(trackingNumber) {
+
+  return {number: trackingNumber, carrier: "fedex"};
 }
