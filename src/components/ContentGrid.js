@@ -3,10 +3,10 @@ import ContentGridPanel from './ContentGridPanel'
 
 import '../scss/ContentGrid.scss'
 
-var array1 = ['panel1', 'panel2', 'panel3', 'panel4', 'panel5', 'panel6'];
+var array1 = ['track', 'panel2', 'panel3', 'panel4', 'panel5', 'panel6'];
 
 // pass a function to map
-const gridItems = array1.map((x) => <ContentGridPanel title={x}/>);
+const gridItems = array1.map((x) => <ContentGridPanel title={x} link={x}/>);
 
 export default function ContentGrid(props) {
   return (
