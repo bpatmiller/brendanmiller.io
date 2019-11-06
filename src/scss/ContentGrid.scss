@@ -1,5 +1,8 @@
 @import "./colors";
 
+$panel-size: 290px;
+$grid-width: 1080px;
+
 .flex-container {
   background-color: $background00;
 
@@ -10,14 +13,14 @@
   align-items: center;
   align-content: center;
 
-  max-width: 1200px;
+  max-width: $grid-width;
   margin: auto;
 }
 
 .flex-item {
   background-color: $background00;
   display: flex;
-  margin: 32px;
+  margin: 28px;
 }
 
 .item-img {
@@ -49,8 +52,8 @@
 .item-content {
   color: $foreground00;
   background-color: $background01;
-  width: 300px;
-  height: 300px;
+  width: $panel-size;
+  height: $panel-size;
   margin: auto;
   box-sizing: border-box;
   position: absolute;
@@ -64,8 +67,8 @@
 
 .item-wrapper {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: $panel-size;
+  height: $panel-size;
   text-align: center;
   align-content: center;
   align-self: center;

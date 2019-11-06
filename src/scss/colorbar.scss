@@ -1,12 +1,17 @@
+@import "./colors.scss";
+
 .colorbar-container {
     display: flex;
-    max-width: 300px;
-
     flex-direction: row;
-    flex-wrap: wrap;
+    margin: auto;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 1px $foreground00 solid;
+
 }
 
 .colorbar-block {
-    width: 24px;
-    height: 24px;
+    width: 16px;
+    height: 8px;
+
 }
