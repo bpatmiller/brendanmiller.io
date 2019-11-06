@@ -1,3 +1,10 @@
+@import "./colors.scss";
+
+.social-icon {
+  margin: 8px;
+  color: $foreground00;
+}
+
 .navBar-wrapper {
   margin: 24px;
   text-align: left;
@@ -25,6 +32,7 @@
 }
 
 .navBar-span {
+  color: $foreground00;
   margin-left: 8px;
   margin-right: 8px;
 }
