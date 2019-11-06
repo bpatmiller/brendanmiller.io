@@ -8,11 +8,13 @@ export default function TestPage(props) {
 
   return (
     <div className="Page404">
+      <div className="Grid404">
       <div className="Block404">
       404<br/>
       <span className="Hilight404">{currentLocation}</span> not found
       <br/><br/>
       return <Link to="/">home</Link>
+      </div>
       </div>
     </div>
   );
