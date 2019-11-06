@@ -8,11 +8,13 @@
 .navBar-wrapper {
   margin: 24px;
   text-align: left;
-  display: grid;
-  align-items: start;
-  justify-items: start;
-  grid-template-columns: 40% 60%;
-  grid-template-areas: "title header";
+  
+  display: flex;
+  flex-flow: row wrap;
+  
+  justify-content: space-between;
+  align-items: flex-start;
+  justify-items: flex-start;
 }
 
 .navBar-col {

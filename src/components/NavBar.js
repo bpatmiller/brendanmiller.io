@@ -24,12 +24,17 @@ export default class NavBar extends Component {
             graphics / machine learning / physical simulation / fractals
           </span>
         </span>
+
         <span className="navBar-col navBar-right">
+          <span className="navBar-span">contact@brendanmiller.io</span>
           <span className="navBar-span">
             <a href="http://www.github.com/bpatmiller" className="social-icon">
               <FontAwesomeIcon icon={faGithub} />
             </a>
-            <a href="https://www.linkedin.com/in/bpatmiller/" className="social-icon">
+            <a
+              href="https://www.linkedin.com/in/bpatmiller/"
+              className="social-icon"
+            >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
           </span>
