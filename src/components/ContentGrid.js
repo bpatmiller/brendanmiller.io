@@ -1,17 +1,18 @@
-import React from 'react';
-import ContentGridPanel from './ContentGridPanel'
+import React from "react";
+import ContentGridPanel from "./ContentGridPanel";
 
-import '../scss/ContentGrid.scss'
-
-var array1 = ['track', 'panel2', 'panel3', 'panel4', 'panel5', 'panel6'];
-
-// pass a function to map
-const gridItems = array1.map((x) => <ContentGridPanel title={x} link={x}/>);
+import "../scss/ContentGrid.scss";
 
 export default function ContentGrid(props) {
-  return (
-    <div className='flex-container'>
-        {gridItems}
-    </div>
-  );
+  const gridItems = props.items.map(x => (
+    <ContentGridPanel
+      title={x}
+      link={x}
+      subtext="bottom text"
+      sidetext="side text whole lotta red"
+      img="./example.png"
+    />
+  ));
+
+  return <div className="flex-container">{gridItems}</div>;
 }

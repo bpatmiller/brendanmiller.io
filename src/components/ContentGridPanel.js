@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 import "../scss/ContentGrid.scss";
 import colors from "../scss/colors.scss";
 
+import exampleImg from "../imgs/example.png";
+
 export default function ContentGridPanel(props) {
   const [hoverRef, isHovered] = useHover();
   const mousePosition = useMousePosition();
@@ -23,7 +25,7 @@ export default function ContentGridPanel(props) {
 
   const wrapperSpringProps = useSpring({
     to: {
-      transform: isHovered ? "scale(1.1)" : "scale(1)"
+      transform: isHovered ? "scale(1.15)" : "scale(1)"
     }
   });
 
@@ -40,7 +42,10 @@ export default function ContentGridPanel(props) {
             style={springProps}
             ref={hoverRef}
           >
-            {props.title}
+            <img className="item-img" src={exampleImg} alt="example img" />
+            {/* <div className="item-img" style={{backgroundColor:"#CCCCCC"}}></div> */}
+            <div className="item-sidetext">{props.sidetext}</div>
+            <div className="item-subtext">{props.subtext}</div>
           </animated.div>
         </Link>
       </div>
@@ -59,8 +64,8 @@ function getTranslation(hoverRef, isHovered, mousePosition) {
     y: (bbRect.top + bbRect.bottom) / 2
   };
   const displacement = {
-    x: (mousePosition.x - centerPosition.x) / 10,
-    y: (mousePosition.y - centerPosition.y) / 10
+    x: (mousePosition.x - centerPosition.x) / 20,
+    y: (mousePosition.y - centerPosition.y) / 20
   };
   const translationString =
     "translate(" +

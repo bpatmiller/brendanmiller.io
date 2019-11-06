@@ -1,9 +1,9 @@
-$background00 : white;
-$background01 : pink;
-$background02: gray;
-$foreground00: black;
-$foreground01: red;
-$foreground02 : purple;
+$background00 : #9CC4B2;
+$background01 : #FFFFFF;
+$background02: #FFFFFF;
+$foreground00: #292D3F;
+$foreground01: #D99381;
+// $foreground02 : #375D6E;
 
 :export {
     background00: $background00;
@@ -11,5 +11,5 @@ $foreground02 : purple;
     background02: $background02;
     foreground00: $foreground00;
     foreground01: $foreground01;
-    foreground02: $foreground02;
+    // foreground02: $foreground02;
   }
