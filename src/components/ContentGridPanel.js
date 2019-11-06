@@ -42,8 +42,7 @@ export default function ContentGridPanel(props) {
             style={springProps}
             ref={hoverRef}
           >
-            <img className="item-img" src={exampleImg} alt="example img" />
-            {/* <div className="item-img" style={{backgroundColor:"#CCCCCC"}}></div> */}
+            {/* <img className="item-img" src={exampleImg} alt="example img" /> */}
             <div className="item-sidetext">{props.sidetext}</div>
             <div className="item-subtext">{props.subtext}</div>
           </animated.div>
