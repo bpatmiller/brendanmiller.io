@@ -14,23 +14,23 @@
   
   justify-content: space-between;
   align-items: flex-start;
-  justify-items: flex-start;
+  align-content: flex-start;
 }
 
 .navBar-col {
-  justify-self: start;
   display: flex;
   flex-direction: row;
+
   align-items: flex-start;
   text-align: left;
+
+  flex-grow: 1;
+  
 }
 
 .navBar-right {
-  justify-self: end;
-}
+  justify-content: flex-end;
 
-.navBar-center {
-  justify-self: center;
 }
 
 .navBar-span {
