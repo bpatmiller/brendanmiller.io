@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 import "../scss/ContentGrid.scss";
 import colors from "../scss/colors.scss";
 
-import exampleImg from "../imgs/example.png";
-
 export default function ContentGridPanel(props) {
   const [hoverRef, isHovered] = useHover();
   const mousePosition = useMousePosition();
@@ -29,6 +27,13 @@ export default function ContentGridPanel(props) {
     }
   });
 
+  var myImg;
+  try {
+    myImg = require(`../imgs/${props.img}`);
+  } catch (e) {
+    myImg = require("../imgs/example.png");
+  }
+
   return (
     <div className="flex-item">
       <div className="item-wrapper">
@@ -42,7 +47,7 @@ export default function ContentGridPanel(props) {
             style={springProps}
             ref={hoverRef}
           >
-            {/* <img className="item-img" src={exampleImg} alt="example img" /> */}
+            <img className="item-img" src={myImg} alt="example img" />
             <div className="item-sidetext">{props.sidetext}</div>
             <div className="item-subtext">{props.subtext}</div>
           </animated.div>

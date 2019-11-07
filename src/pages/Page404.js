@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import HoverLink from "../components/HoverLink";
 
+import "../scss/App.scss";
 import "../scss/404.scss";
 
 export default function TestPage(props) {
-  var currentLocation = props.location.pathname;
+  const currentLocation = props.location.pathname;
+  const hoverLinkProps = {link: "/", content: "home"};
 
   return (
     <div className="Page404">
@@ -13,7 +15,7 @@ export default function TestPage(props) {
       404<br/>
       <span className="Hilight404">{currentLocation}</span> not found
       <br/><br/>
-      return <Link to="/">home</Link>
+      return <HoverLink {...hoverLinkProps}></HoverLink>
       </div>
       </div>
     </div>
