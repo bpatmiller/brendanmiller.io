@@ -9,7 +9,7 @@ export default function ContentGrid(props) {
       title={x}
       link={x}
       subtext="bottom text"
-      sidetext="side text whole lotta red"
+      sidetext="side text"
       img={x+".png"}
     />
   ));
